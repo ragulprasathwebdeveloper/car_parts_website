@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart Page</title>
+  <script src="https://kit.fontawesome.com/167289cbb0.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <style>
+    
+    @media (max-width: 478px) {
+      h1 {
+        font-size: 1.5rem;
+        color: red;
+      }
+
+      table td,
+      table th {
+        font-size: 10px;
+        padding: 5px;
+      }
+
+      .btn {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.6rem;
+        display: flex;
+      }
+      .imgcart{
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+
+<body class="imgcart">
+  <h1 class="text-center mt-5 text-dark">Your Cart</h1>
+  <div class="container mt-5">
+    <div class="table-responsive">
+      <table id="cart-table"
+        class="table table-bordered align-middle shadow-sm rounded-3 overflow-hidden bg-white">
+        <thead class="table-success">
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+         
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      displayCartItems();
+    });
+
+    function displayCartItems() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cartTableBody = document.querySelector('#cart-table tbody');
+      cartTableBody.innerHTML = '';
+
+      cart.forEach((item, index) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${item.name}</td>
+          <td>$${item.price}</td>
+          <td class="align-items-center gap-1 flex-wrap">
+            <button class='btn btn-sm btn-outline-danger rounded' onclick="decreaseQuantity(${index})">
+              <i class="fas fa-minus"></i>
+            </button>
+            <span>${item.quantity}</span>
+            <button class='btn btn-sm btn-outline-success rounded' onclick="increaseQuantity(${index})">
+              <i class="fas fa-plus"></i>
+            </button>
+          </td>
+          <td>$${item.price * item.quantity}</td>
+          <td>
+            <button class='btn btn-sm btn-danger rounded-pill' onclick="removeItem(${index})">
+              <i class="fas fa-trash-alt me-1"></i>Remove
+            </button>
+          </td>
+        `;
+        cartTableBody.appendChild(row);
+      });
+
+      const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+      const totalRow = document.createElement('tr');
+      totalRow.innerHTML = `<td colspan="3" class="fw-bold">Total</td><td colspan="2" class="fw-bold">$${total}</td>`;
+      cartTableBody.appendChild(totalRow);
+    }
+
+    function increaseQuantity(index) {
+      let cart = JSON.parse(localStorage.getItem('cart'));
+      cart[index].quantity += 1;
+      localStorage.setItem('cart', JSON.stringify(cart));
+      displayCartItems();
+    }
+
+    function decreaseQuantity(index) {
+      let cart = JSON.parse(localStorage.getItem('cart'));
+      if (cart[index].quantity > 1) {
+        cart[index].quantity -= 1;
+      } else {
+        cart.splice(index, 1);
+      }
+      localStorage.setItem('cart', JSON.stringify(cart));
+      displayCartItems();
+    }
+
+    function removeItem(index) {
+      let cart = JSON.parse(localStorage.getItem('cart'));
+      cart.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      displayCartItems();
+    }
+  </script>
+
+</body>
+
+</html>

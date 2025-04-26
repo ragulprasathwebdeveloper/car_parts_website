@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index Page</title>
+  <script src="https://kit.fontawesome.com/167289cbb0.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+</head> 
+
+<body>
+
+  <!------------------------ NavBar Content ---------------------->
+  <div class="backimage">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary text-center">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">CAR<span style="color: red;">POINT</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item" style="display: flex; align-items: center;"> 
+              <img src="img/Home.png" style="width: 20px; height: 20px; margin-right: 8px;">
+              <a class="nav-link active" aria-current="page" href="#"><span style="color: black;">HOME</span></a>
+            </li>
+            
+            <li class="nav-item" style="display: flex; align-items: center;">
+              <img src="img/login.png" style="width: 20px; height: 20px; margin-right: 8px;">
+              <a class="nav-link" href="login.html"><span style="color: black; text-transform: uppercase;">Log in</span></a>
+            </li>
+            
+            <li class="nav-item" style="display: flex; align-items: center;">
+              <img src="img/sign in.png" style="width: 20px; height: 20px; margin-right: 8px;">
+              <a class="nav-link" href="signin.html"><span style="color: black; text-transform: uppercase;">Sign Up</span></a>
+            </li>            
+          </ul>
+          <form class="search-form d-flex" role="search">
+            <input class="form-control search-input" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn search-button" type="submit">Search</button>
+          </form>
+          <div class="ms-3 d-flex" id="login">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a href="cart.html" class="cart-icon">
+                  <i class="fa fa-shopping-cart text-dark"></i>
+                  <span id="cart-count">0</span>
+                </a>
+                
+              </li>
+              <li class="nav-item">
+                <a href="userprofile.html">
+                  <i class="fa-solid fa-circle-user fa-xl text-dark ms-3"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="position-relative">
+      <h2 class="text-dark text-start responsive-text">
+        We Have Everything <br> Your <span style="color: red;">Car</span> Need
+      </h2>
+      <div>
+        <p class="text-black fs-sm-3 fs-md-2 fs-lg-1 text-start responsive-text1">
+          Everything Your Car Needs – <br> All in One Place.
+        </p>
+      </div> <br>
+      <div>
+        <button type="button" class="btn btn-danger button1">Discover Now</button>
+      </div>
+
+    </div>
+
+  </div> <br>
+
+  <div class="text-center">
+    <p style="color: red; font-size: 26px; font-weight: 400;">All Cars</p>
+    <p style="color: black; font-size: 26px; font-weight: 700;">We have all types cars</p>
+    <p>Your one-stop destination for every kind of car.</p>
+  </div>
+
+  <!---------------------------- All Cars Place --------------------------->
+
+  <div class="image-grid">
+    <div class="image-container">
+      <img src="img/car1.jpg" alt="Image 1" class="hover-image">
+      <button class="image-button">Porche Cars</button>
+    </div>
+    <div class="image-container">
+      <img src="img/car2.jpg" alt="Image 2" class="hover-image">
+      <button class="image-button">Porche Cars</button>
+    </div>
+    <div class="image-container">
+      <img src="img/car3.jpg" alt="Image 3" class="hover-image">
+      <button class="image-button">Porche Cars</button>
+    </div>
+    <div class="image-container">
+      <img src="img/car4.jpg" alt="Image 4" class="hover-image">
+      <button class="image-button">Porche Cars</button>
+    </div>
+    <div class="image-container">
+      <img src="img/car1.jpg" alt="Image 5" class="hover-image">
+      <button class="image-button">Porche Cars</button>
+    </div>
+    <div class="image-container">
+      <img src="img/car6.jpg" alt="Image 6" class="hover-image">
+      <button class="image-button">Porche Cars</button>
+    </div>
+  </div>
+
+  <!--------------------------- About Us -------------------------->
+
+  <div class="content-wrapper">
+    <div class="image-side">
+      <img src="img/about.png" alt="Car Image" class="responsive-image">
+    </div>
+    <div class="text-side">
+      <h2 class="text-danger">About Us</h2>
+      <h2 style="color: black; font-weight: 600;">Cheap Price With <br> Quality Prices</h2>
+      <p id="content">
+        We offer a wide range of services to meet all your car needs.
+        <span id="extraContent">From routine maintenance to major repairs, our team is here to help. Whether you need an
+          oil change, tire rotation, or brake service, we've got you covered.</span>
+      </p>
+      <button id="toggleButton" class="btn btn-danger" onclick="toggleContent()">Learn Less</button>
+    </div>
+  </div>
+
+  <!-------------------- Parts Starting Point -------------------->
+
+  <div class="text-center">
+    <p style="color: red; font-size: 20px; font-weight: 600;">What We Offer</p>
+    <h4 style="color: black; font-size: 26px; font-weight: 600;">Our Car Is Always Excellent</h4>
+    <p>Keep your car running like new – find the right parts here.</p>
+  </div>
+
+<div class="container mt-4">
+  <div class="justify-content-start gap-5 parts" id="products">
+  
+    <div class="card shadow-sm" style="width: 18rem;">
+      <img src="img/part1.png" class="card-img-top" alt="Car 1" style="height: 200px;">
+      <div class="card-body bodycontent">
+        <h5 class="card-title" style="color: black;">Engine Part</h5>
+        <p class="card-text" style="font-weight: 700; color: red;">$89.50</p>
+        <i class="fa-solid fa-star" style="color: #f20707;"></i><span style="color: red;">(10 Reviews)</span>
+        <div class="d-flex justify-content-between mt-3">
+          <a href="#" class="btn add-to-cart-btn" style="color: white; background-color: red; width: 100%;" data-name="Engine Part" data-price="89.50">Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card shadow-sm" style="width: 18rem;">
+      <img src="img/AEP.jpeg" class="card-img-top" alt="Car 1" style="height: 200px;">
+      <div class="card-body bodycontent">
+        <h5 class="card-title" style="color: black;">Advance Engine Part</h5>
+        <p class="card-text" style="font-weight: 700; color: red;">$189.50</p>
+        <i class="fa-solid fa-star" style="color: #f20707;"></i><span style="color: red;">(10 Reviews)</span>
+        <div class="d-flex justify-content-between mt-3">
+          <a href="#" class="btn add-to-cart-btn" style="color: white; background-color: red; width: 100%;" data-name="Advance Engine Part" data-price="189.50">Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="card shadow-sm" style="width: 18rem;">
+      <img src="img/part2.png" class="card-img-top" alt="Car 2" style="height: 200px;">
+      <div class="card-body bodycontent">
+        <h5 class="card-title" style="color: black;">Auto Spare Parts</h5>
+        <p class="card-text" style="font-weight: 700; color: red;">$120.99</p>
+        <i class="fa-solid fa-star" style="color: #f20707;"></i><span style="color: red;">(6 Reviews)</span>
+        <div class="d-flex justify-content-between mt-3">
+          <a href="#" class="btn add-to-cart-btn" style="color: white; background-color: red; width: 100%;" data-name="Spare Parts" data-price="120.99">Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card shadow-sm" style="width: 18rem;">
+      <img src="img/part3.png" class="card-img-top" alt="Car 3" style="height: 200px;">
+      <div class="card-body bodycontent">
+        <h5 class="card-title" style="color: black;">Brake Pads</h5>
+        <p class="card-text" style="font-weight: 700; color: red;">$49.99</p>
+        <i class="fa-solid fa-star" style="color: #f20707;"></i><span style="color: red;">(15 Reviews)</span>
+        <div class="d-flex justify-content-between mt-3">
+          <a href="#" class="btn add-to-cart-btn" style="color: white; background-color: red; width: 100%;" data-name="Brake Pads" data-price="49.99">Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="card shadow-sm" style="width: 18rem;">
+      <img src="img/part4.png" class="card-img-top" alt="Car 4" style="height: 200px;">
+      <div class="card-body bodycontent">
+        <h5 class="card-title" style="color: black;">Car Battery</h5>
+        <p class="card-text" style="font-weight: 700; color: red;">$150.00</p>
+        <i class="fa-solid fa-star" style="color: #f20707;"></i><span style="color: red;">(8 Reviews)</span>
+        <div class="d-flex justify-content-between mt-3">
+          <a href="#" class="btn add-to-cart-btn" style="color: white; background-color: red; width: 100%;" data-name="Car Battery" data-price="150.00">Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card shadow-sm" style="width: 18rem;">
+      <img src="img/oil parts.jpeg" class="card-img-top" alt="Oil Filter" style="height: 200px;">
+      <div class="card-body bodycontent">
+        <h5 class="card-title" style="color: black;">Oil Filter</h5>
+        <p class="card-text" style="font-weight: 700; color: red;">$25.99</p>
+        <i class="fa-solid fa-star" style="color: #f20707;"></i><span style="color: red;">(12 Reviews)</span>
+        <div class="d-flex justify-content-between mt-3">
+          <a href="#" class="btn add-to-cart-btn" style="color: white; background-color: red; width: 100%;" data-name="Oil Filter" data-price="25.99">Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card shadow-sm" style="width: 18rem;">
+      <img src="img/Spark Plug.jpeg" class="card-img-top" alt="Spark Plug" style="height: 200px;">
+      <div class="card-body bodycontent">
+        <h5 class="card-title" style="color: black;">Spark Plug</h5>
+        <p class="card-text" style="font-weight: 700; color: red;">$19.99</p>
+        <i class="fa-solid fa-star" style="color: #f20707;"></i><span style="color: red;">(7 Reviews)</span>
+        <div class="d-flex justify-content-between mt-3">
+          <a href="#" class="btn add-to-cart-btn" style="color: white; background-color: red; width: 100%;" data-name="Spark Plug" data-price="19.99">Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card shadow-sm" style="width: 18rem;">
+      <img src="img/Ari filter.jpeg" class="card-img-top" alt="Air Filter" style="height: 200px;">
+      <div class="card-body bodycontent">
+        <h5 class="card-title" style="color: black;">Air Filter</h5>
+        <p class="card-text" style="font-weight: 700; color: red;">$29.99</p>
+        <i class="fa-solid fa-star" style="color: #f20707;"></i><span style="color: red;">(9 Reviews)</span>
+        <div class="d-flex justify-content-between mt-3">
+          <a href="#" class="btn add-to-cart-btn" style="color: white; background-color: red; width: 100%;" data-name="Air Filter" data-price="29.99">Buy Now</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+   
+  <div class="text-center mt-5">
+    <h4 class="text-danger">Blog & News</h4>
+    <h5 style="color: black; font-weight: 700;">Our Blog Content</h5>
+    <p>Drive smarter with our latest blogs and car news.</p>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row">
+ 
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="img/car1.jpg" class="card-img-top" alt="Car 1" style="height: 266px;">
+          <div class="card-body">
+            <p class="card-title" style=" font-weight: 300; color: black;">Mar 06, 2006</p>
+            <p class="card-text" style="font-weight: 500; color: black;">How to get perfect car at low price</p>
+            <p>Getting the perfect car doesn’t have to break the bank. With the right strategy and a bit of patience, you can drive away with a great vehicle that fits both your needs and your budget.</p>
+            <div class="d-flex justify-content-between mt-3">
+              <a href="#" class="btn" style="color: white; background-color: red; width: 50%; border-radius: 50px;">Read
+                More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="img/car2.jpg" class="card-img-top" alt="Car 2" style="height: 266px;">
+          <div class="card-body">
+            <p class="card-title" style=" font-weight: 300; color: black;">Mar 06, 2006</p>
+            <p class="card-text" style="font-weight: 500; color: black;">How to get perfect car at low price</p>
+            <p>Getting the perfect car doesn’t have to break the bank. With the right strategy and a bit of patience, you can drive away with a great vehicle that fits both your needs and your budget.</p>
+            <div class="d-flex justify-content-between mt-3">
+              <a href="#" class="btn" style="color: white; background-color: red; width: 50%; border-radius: 50px;">Read
+                More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="img/car3.jpg" class="card-img-top" alt="Car 3" style="height: 266px;">
+          <div class="card-body">
+            <p class="card-title" style=" font-weight: 300; color: black;">Mar 06, 2006</p>
+            <p class="card-text" style="font-weight: 500; color: black;">How to get perfect car at low price</p>
+            <p>Getting the perfect car doesn’t have to break the bank. With the right strategy and a bit of patience, you can drive away with a great vehicle that fits both your needs and your budget.</p>
+            <div class="d-flex justify-content-between mt-3">
+              <a href="#" class="btn" style="color: white; background-color: red; width: 50%; border-radius: 50px;">Read
+                More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer style="background-color: black; padding: 20px 0;">
+    <div class="container">
+      <div class="row">
+      
+        <div class="col-12 col-md-4 text-md-left">
+          <h2 class="mb-3 mb-md-0" style="color: white;">
+            Car<span style="color: red;">Point</span>
+          </h2>
+        </div>
+        
+        <div class="col-12 col-md-4 text-md-left mt-2 mt-md-0">
+          <i class="fa-brands fa-square-facebook" style="color: white; font-size: 36px;"></i>
+          <i class="fa-brands fa-square-twitter mx-2" style="color: white; font-size: 36px;"></i>
+          <i class="fa-brands fa-square-instagram mx-2" style="color: white; font-size: 36px;"></i>
+          <i class="fa-brands fa-square-youtube mx-2" style="color: white; font-size: 36px;"></i>
+        </div>
+      </div>
+      
+      <div class="row mt-4">
+        <div class="col-12 col-md-4 col-sm-4">
+          <ul class="list-unstyled">
+            <li class="mb-2 text-white">Page</li>
+            <li class="mb-2 listitems1">Home</li>
+            <li class="mb-2 listitems1">Cars</li>
+            <li class="mb-2 listitems1">Parts</li>
+            <li class="listitems1">Sales</li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4 col-sm-4">
+          <ul class="list-unstyled">
+            <li class="mb-2 text-white">Legal</li>
+            <li class="mb-2 listitems1">Privacy</li>
+            <li class="mb-2 listitems1">Refund Policy</li>
+            <li class="listitems1">Cookie Policy</li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4 col-sm-4">
+          <ul class="list-unstyled">
+            <li class="mb-2 text-white">Contact</li>
+            <li class="mb-2 listitems1">United States</li>
+            <li class="mb-2 listitems1">Japan</li>
+            <li class="listitems1">Germany</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <!-------------------- learn more and learn less ------------------->
+
+  <script>
+    function toggleContent() {
+      var extraContent = document.getElementById("extraContent");
+      var button = document.getElementById("toggleButton");
+
+      if (extraContent.style.display === "none") {
+        extraContent.style.display = "inline";  
+        button.textContent = "Learn Less";      
+      } else {
+        extraContent.style.display = "none";   
+        button.textContent = "Learn More";  
+      }
+    }
+
+  </script>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateCartCount();
+
+    const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const productName = button.getAttribute('data-name');
+            const productPrice = parseInt(button.getAttribute('data-price'), 10); 
+
+            addToCart(productName, productPrice);
+            updateCartCount();
+        });
+    });
+});
+
+
+function addToCart(productName, productPrice) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    const existingProduct = cart.find(item => item.name === productName);
+
+    if (existingProduct) {
+        existingProduct.quantity += 1;
+    } else {
+        cart.push({ name: productName, price: productPrice, quantity: 1 });
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+
+    const cartCountElement = document.getElementById('cart-count');
+    if (cartCountElement) {
+        cartCountElement.textContent = cartCount;
+    }
+}
+</script>
+
+</script>
+
+<script src="cart.js"></script>
+
+</body>
+
+</html>
